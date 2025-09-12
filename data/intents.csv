@@ -1,0 +1,13 @@
+query,intent
+I have fever,symptom
+I am coughing and sneezing,symptom
+I feel headache,symptom
+What is diabetes?,faq
+What is hypertension?,faq
+Tell me about malaria,faq
+How to stay healthy?,tips
+Give me diet advice,tips
+How to improve sleep?,tips
+First aid for burns,first_aid
+What to do if someone faints?,first_aid
+Basic CPR steps,first_aid
