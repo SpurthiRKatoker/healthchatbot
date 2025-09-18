@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Select a Profile</h2>
+<div class="row">
+  {% for profile in profiles %}
+  <div class="col-md-3">
+    <div class="card mb-3">
+      <div class="card-body text-center">
+        <h5>{{ profile.name }}</h5>
+        <a href="{{ url_for('chat', profile_id=profile.id) }}" class="btn btn-primary">Enter Chat</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<a href="#" class="btn btn-success">+ Add New Profile</a>
+{% endblock %}
