@@ -1,7 +1,157 @@
-body {
-  background-color: #f9fafc;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.card {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+body {
+  background: linear-gradient(135deg, #e8fdf4, #d6f6e9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2d6a4f;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #2d6a4f;
+}
+
+/* Landing Page */
+.landing {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.landing .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.landing h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.landing .highlight {
+  color: #2d6a4f;
+}
+
+.landing p {
+  margin: 20px auto;
+  max-width: 600px;
+  color: #444;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #2d6a4f;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #1b4332;
+}
+
+.btn.secondary {
+  border: 2px solid #2d6a4f;
+  color: #2d6a4f;
+}
+
+.btn.secondary:hover {
+  background: #2d6a4f;
+  color: white;
+}
+
+/* Forms */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.form-container .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #2d6a4f;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-container input:focus {
+  border-color: #2d6a4f;
+  outline: none;
+}
+
+.form-container .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.form-container .alt {
+  margin-top: 15px;
+  color: #555;
+}
+
+.form-container .alt a {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: 500;
 }

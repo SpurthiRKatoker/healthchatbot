@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="text-center">
-  <h1 class="mb-4">Welcome to the 🩺 Health Chatbot</h1>
-  <p class="lead">Your AI-powered assistant for quick health advice.</p>
-  <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Login</a>
-  <a href="{{ url_for('signup') }}" class="btn btn-success btn-lg">Sign Up</a>
-</div>
+<section class="landing">
+  <div class="icon">❤️</div>
+  <h1>Your AI Healthcare <span class="highlight">Assistant</span></h1>
+  <p>Get instant, intelligent healthcare guidance powered by AI. From symptom assessment to emergency detection, we’re here 24/7.</p>
+  <div class="buttons">
+    <a href="{{ url_for('signup') }}" class="btn primary">Get Started Free</a>
+    <a href="{{ url_for('login') }}" class="btn secondary">Sign In</a>
+  </div>
+</section>
 {% endblock %}

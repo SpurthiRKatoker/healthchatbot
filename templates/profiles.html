@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Select a Profile</h2>
-<div class="row">
+<h2 class="page-title">Who's using?</h2>
+
+<div class="profiles-grid">
   {% for profile in profiles %}
-  <div class="col-md-3">
-    <div class="card mb-3">
-      <div class="card-body text-center">
-        <h5>{{ profile.name }}</h5>
-        <a href="{{ url_for('chat', profile_id=profile.id) }}" class="btn btn-primary">Enter Chat</a>
-      </div>
+  <div class="profile-card">
+    <div class="profile-icon">👤</div>
+    <h3>{{ profile.name }}</h3>
+    <div class="profile-actions">
+      <a href="{{ url_for('chat', profile_id=profile.id) }}" class="btn btn-primary">Enter Chat</a>
+      <a href="{{ url_for('profile_manage', profile_id=profile.id) }}" class="btn btn-secondary">Manage</a>
     </div>
   </div>
   {% endfor %}
 </div>
 
-<a href="#" class="btn btn-success">+ Add New Profile</a>
+<div class="add-profile">
+  <a href="{{ url_for('add_profile') }}" class="btn btn-success">+ Add New Profile</a>
+</div>
 {% endblock %}
