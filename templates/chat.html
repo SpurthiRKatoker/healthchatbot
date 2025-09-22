@@ -53,6 +53,32 @@
     margin-right: auto;
     text-align: left;
   }
+
+  /* Extra styles for bot replies */
+  .bot-msg ul {
+    margin: 6px 0 6px 18px;
+    padding: 0;
+  }
+  .bot-msg p {
+    margin: 6px 0;
+  }
+  .bot-msg b {
+    display: block;
+    margin-top: 6px;
+    color: #333;
+  }
+  .bot-msg .warning {
+    background: #fff3cd;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin: 6px 0;
+  }
+  .bot-msg .precautions {
+    background: #e7f5ee;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin: 6px 0;
+  }
   .input-row {
     display: flex;
     margin-top: 1rem;
@@ -80,17 +106,16 @@
 
   <!-- Tabs -->
   <div class="tabs">
-  <div class="tab active" data-tab="chat" onclick="switchTab('chat')">Chat Assistant</div>
-  <div class="tab" data-tab="history" onclick="switchTab('history')">Chat History</div>
-</div>
-
+    <div class="tab active" data-tab="chat" onclick="switchTab('chat')">Chat Assistant</div>
+    <div class="tab" data-tab="history" onclick="switchTab('history')">Chat History</div>
+  </div>
 
   <!-- Chat Assistant -->
   <div id="chat" class="tab-content active">
     <div class="chat-box">
       {% for chat in chats %}
         <div class="message user-msg"><strong>You:</strong> {{ chat.message }}</div>
-        <div class="message bot-msg"><strong>Bot:</strong> {{ chat.response }}</div>
+        <div class="message bot-msg"><strong>Bot:</strong> {{ chat.response|safe }}</div>
       {% endfor %}
     </div>
 
@@ -106,7 +131,7 @@
     <ul>
       {% for chat in chats %}
         <li><strong>You:</strong> {{ chat.message }}<br>
-            <strong>Bot:</strong> {{ chat.response }}</li>
+            <strong>Bot:</strong> {{ chat.response|safe }}</li>
       {% else %}
         <li>No chat history yet.</li>
       {% endfor %}
@@ -116,11 +141,9 @@
 
 <script>
   function switchTab(tabId) {
-    // remove "active" from all tabs and contents
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-    // add active to the clicked tab and content
     document.querySelector(`.tab[data-tab="${tabId}"]`).classList.add('active');
     document.getElementById(tabId).classList.add('active');
   }

@@ -1,0 +1,54 @@
+disease,symptom
+Common Cold,fever
+Common Cold,cough
+Common Cold,runny nose
+Common Cold,sore throat
+Flu,fever
+Flu,headache
+Flu,body ache
+Flu,fatigue
+Migraine,headache
+Migraine,nausea
+Migraine,sensitivity to light
+Asthma,shortness of breath
+Asthma,wheezing
+Asthma,chest tightness
+Pneumonia,fever
+Pneumonia,cough
+Pneumonia,chest pain
+Pneumonia,shortness of breath
+Covid-19,fever
+Covid-19,cough
+Covid-19,fatigue
+Covid-19,loss of smell
+Diabetes,excessive thirst
+Diabetes,frequent urination
+Diabetes,fatigue
+Hypertension,headache
+Hypertension,dizziness
+Hypertension,blurred vision
+Heart Attack,chest pain
+Heart Attack,shortness of breath
+Heart Attack,dizziness
+Stroke,weakness on one side
+Stroke,difficulty speaking
+Stroke,vision problems
+Food Poisoning,stomach pain
+Food Poisoning,diarrhea
+Food Poisoning,vomiting
+Gastritis,stomach pain
+Gastritis,nausea
+Gastritis,bloating
+Arthritis,joint pain
+Arthritis,stiffness
+Arthritis,swelling
+Anemia,fatigue
+Anemia,dizziness
+Anemia,pale skin
+Allergy,itching
+Allergy,sneezing
+Allergy,runny nose
+Tuberculosis,cough
+Tuberculosis,fever
+Tuberculosis,night sweats
+Tuberculosis,weight loss

@@ -4,7 +4,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from config import Config
 from models import db, User, Profile, Chat
-from chatbot import HealthChatbot
+from nlp_triage import triage
+import pandas as pd
+
+faq_df = pd.read_csv("data/symptom_Description.csv")
+faq_df.columns = faq_df.columns.str.strip().str.lower()  # normalize headers
+faq_dict = dict(zip(faq_df["disease"].str.lower(), faq_df["description"]))
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -183,11 +188,10 @@ def chat(profile_id):
         return redirect(url_for("profiles"))
 
     session["active_profile_id"] = profile.id
-    chatbot = HealthChatbot()
 
     if request.method == "POST":
         user_message = request.form["message"]
-        response = chatbot.get_response(user_message)
+        response = triage(user_message)   # ✅ use NLP pipeline
 
         chat_entry = Chat(profile_id=profile.id, message=user_message, response=response)
         db.session.add(chat_entry)
@@ -195,6 +199,22 @@ def chat(profile_id):
 
     chats = Chat.query.filter_by(profile_id=profile.id).all()
     return render_template("chat.html", profile=profile, chats=chats, extra_css="style_chat.css")
+
+@app.route("/faq", methods=["GET", "POST"])
+@login_required
+def faq():
+    query = None
+    answer = None
+    if request.method == "POST":
+        query = request.form["question"].lower()
+        for disease, desc in faq_dict.items():
+            if disease in query:
+                answer = (disease.title(), desc)
+                break
+        if not answer:
+            answer = ("Not Found", "Sorry, I don't have information about that disease yet.")
+    return render_template("faq.html", query=query, answer=answer, faq_dict=faq_dict, extra_css="style_faq.css")
+
 
 
 # ------------------ Run ------------------

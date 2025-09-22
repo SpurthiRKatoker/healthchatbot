@@ -1,0 +1,322 @@
+disease,symptom
+fungal infection,itching
+fungal infection,skin rash
+fungal infection,nodal skin eruptions
+fungal infection,dischromic patches
+allergy,continuous sneezing
+allergy,shivering
+allergy,chills
+allergy,watering from eyes
+gerd,stomach pain
+gerd,acidity
+gerd,ulcers on tongue
+gerd,vomiting
+gerd,cough
+gerd,chest pain
+chronic cholestasis,itching
+chronic cholestasis,vomiting
+chronic cholestasis,yellowish skin
+chronic cholestasis,nausea
+chronic cholestasis,loss of appetite
+chronic cholestasis,abdominal pain
+chronic cholestasis,yellowing of eyes
+drug reaction,itching
+drug reaction,skin rash
+drug reaction,stomach pain
+drug reaction,burning micturition
+drug reaction,spotting urination
+peptic ulcer diseae,vomiting
+peptic ulcer diseae,loss of appetite
+peptic ulcer diseae,abdominal pain
+peptic ulcer diseae,passage of gases
+peptic ulcer diseae,internal itching
+peptic ulcer diseae,indigestion
+aids,muscle wasting
+aids,patches in throat
+aids,high fever
+aids,extra marital contacts
+diabetes,fatigue
+diabetes,weight loss
+diabetes,restlessness
+diabetes,lethargy
+diabetes,irregular sugar level
+diabetes,blurred and distorted vision
+diabetes,obesity
+diabetes,excessive hunger
+diabetes,increased appetite
+diabetes,polyuria
+gastroenteritis,vomiting
+gastroenteritis,sunken eyes
+gastroenteritis,dehydration
+gastroenteritis,diarrhoea
+bronchial asthma,fatigue
+bronchial asthma,cough
+bronchial asthma,high fever
+bronchial asthma,breathlessness
+bronchial asthma,family history
+bronchial asthma,mucoid sputum
+hypertension,headache
+hypertension,chest pain
+hypertension,dizziness
+hypertension,loss of balance
+hypertension,lack of concentration
+migraine,acidity
+migraine,indigestion
+migraine,headache
+migraine,blurred and distorted vision
+migraine,excessive hunger
+migraine,stiff neck
+migraine,depression
+migraine,irritability
+migraine,visual disturbances
+cervical spondylosis,back pain
+cervical spondylosis,weakness in limbs
+cervical spondylosis,neck pain
+cervical spondylosis,dizziness
+cervical spondylosis,loss of balance
+paralysis brain hemorrhage,vomiting
+paralysis brain hemorrhage,headache
+paralysis brain hemorrhage,weakness of one body side
+paralysis brain hemorrhage,altered sensorium
+jaundice,itching
+jaundice,vomiting
+jaundice,fatigue
+jaundice,weight loss
+jaundice,high fever
+jaundice,yellowish skin
+jaundice,dark urine
+jaundice,abdominal pain
+malaria,chills
+malaria,vomiting
+malaria,high fever
+malaria,sweating
+malaria,headache
+malaria,nausea
+malaria,muscle pain
+malaria,diarrhoea
+chicken pox,itching
+chicken pox,skin rash
+chicken pox,fatigue
+chicken pox,lethargy
+chicken pox,high fever
+chicken pox,headache
+chicken pox,loss of appetite
+chicken pox,mild fever
+chicken pox,swelled lymph nodes
+chicken pox,malaise
+chicken pox,red spots over body
+dengue,skin rash
+dengue,chills
+dengue,joint pain
+dengue,vomiting
+dengue,fatigue
+dengue,high fever
+dengue,headache
+dengue,nausea
+dengue,loss of appetite
+dengue,pain behind the eyes
+dengue,back pain
+dengue,muscle pain
+dengue,red spots over body
+dengue,malaise
+typhoid,chills
+typhoid,vomiting
+typhoid,fatigue
+typhoid,high fever
+typhoid,nausea
+typhoid,constipation
+typhoid,abdominal pain
+typhoid,diarrhoea
+typhoid,toxic look typhos
+typhoid,belly pain
+typhoid,headache
+hepatitis a,joint pain
+hepatitis a,vomiting
+hepatitis a,yellowish skin
+hepatitis a,dark urine
+hepatitis a,nausea
+hepatitis a,loss of appetite
+hepatitis a,abdominal pain
+hepatitis a,diarrhoea
+hepatitis a,mild fever
+hepatitis a,yellowing of eyes
+hepatitis a,muscle pain
+hepatitis b,itching
+hepatitis b,fatigue
+hepatitis b,lethargy
+hepatitis b,yellowish skin
+hepatitis b,dark urine
+hepatitis b,loss of appetite
+hepatitis b,abdominal pain
+hepatitis b,yellow urine
+hepatitis b,yellowing of eyes
+hepatitis b,malaise
+hepatitis b,receiving blood transfusion
+hepatitis b,receiving unsterile injections
+hepatitis c,fatigue
+hepatitis c,yellowish skin
+hepatitis c,nausea
+hepatitis c,loss of appetite
+hepatitis c,family history
+hepatitis c,yellowing of eyes
+hepatitis d,joint pain
+hepatitis d,vomiting
+hepatitis d,fatigue
+hepatitis d,yellowish skin
+hepatitis d,dark urine
+hepatitis d,nausea
+hepatitis d,loss of appetite
+hepatitis d,abdominal pain
+hepatitis d,yellowing of eyes
+hepatitis e,joint pain
+hepatitis e,vomiting
+hepatitis e,fatigue
+hepatitis e,high fever
+hepatitis e,yellowish skin
+hepatitis e,dark urine
+hepatitis e,nausea
+hepatitis e,loss of appetite
+hepatitis e,abdominal pain
+hepatitis e,yellowing of eyes
+hepatitis e,coma
+hepatitis e,stomach bleeding
+hepatitis e,acute liver failure
+alcoholic hepatitis,vomiting
+alcoholic hepatitis,yellowish skin
+alcoholic hepatitis,abdominal pain
+alcoholic hepatitis,swelling of stomach
+alcoholic hepatitis,distention of abdomen
+alcoholic hepatitis,history of alcohol consumption
+alcoholic hepatitis,fluid overload
+tuberculosis,chills
+tuberculosis,vomiting
+tuberculosis,fatigue
+tuberculosis,weight loss
+tuberculosis,cough
+tuberculosis,high fever
+tuberculosis,breathlessness
+tuberculosis,sweating
+tuberculosis,loss of appetite
+tuberculosis,mild fever
+tuberculosis,yellowing of eyes
+tuberculosis,swelled lymph nodes
+tuberculosis,malaise
+tuberculosis,phlegm
+tuberculosis,chest pain
+tuberculosis,blood in sputum
+common cold,continuous sneezing
+common cold,chills
+common cold,fatigue
+common cold,cough
+common cold,high fever
+common cold,headache
+common cold,swelled lymph nodes
+common cold,malaise
+common cold,phlegm
+common cold,throat irritation
+common cold,redness of eyes
+common cold,sinus pressure
+common cold,runny nose
+common cold,congestion
+common cold,chest pain
+common cold,loss of smell
+common cold,muscle pain
+pneumonia,chills
+pneumonia,fatigue
+pneumonia,cough
+pneumonia,high fever
+pneumonia,breathlessness
+pneumonia,sweating
+pneumonia,malaise
+pneumonia,chest pain
+pneumonia,fast heart rate
+pneumonia,rusty sputum
+pneumonia,phlegm
+dimorphic hemmorhoids piles,constipation
+dimorphic hemmorhoids piles,pain during bowel movements
+dimorphic hemmorhoids piles,pain in anal region
+dimorphic hemmorhoids piles,bloody stool
+dimorphic hemmorhoids piles,irritation in anus
+heart attack,vomiting
+heart attack,breathlessness
+heart attack,sweating
+heart attack,chest pain
+varicose veins,fatigue
+varicose veins,cramps
+varicose veins,bruising
+varicose veins,obesity
+varicose veins,swollen legs
+varicose veins,swollen blood vessels
+varicose veins,prominent veins on calf
+hypothyroidism,fatigue
+hypothyroidism,weight gain
+hypothyroidism,cold hands and feets
+hypothyroidism,mood swings
+hypothyroidism,lethargy
+hypothyroidism,dizziness
+hypothyroidism,puffy face and eyes
+hypothyroidism,enlarged thyroid
+hypothyroidism,brittle nails
+hypothyroidism,swollen extremeties
+hypothyroidism,depression
+hypothyroidism,irritability
+hypothyroidism,abnormal menstruation
+hyperthyroidism,fatigue
+hyperthyroidism,mood swings
+hyperthyroidism,weight loss
+hyperthyroidism,restlessness
+hyperthyroidism,sweating
+hyperthyroidism,diarrhoea
+hyperthyroidism,fast heart rate
+hyperthyroidism,excessive hunger
+hyperthyroidism,muscle weakness
+hyperthyroidism,irritability
+hyperthyroidism,abnormal menstruation
+hypoglycemia,vomiting
+hypoglycemia,fatigue
+hypoglycemia,anxiety
+hypoglycemia,sweating
+hypoglycemia,headache
+hypoglycemia,nausea
+hypoglycemia,blurred and distorted vision
+hypoglycemia,excessive hunger
+hypoglycemia,slurred speech
+hypoglycemia,irritability
+hypoglycemia,palpitations
+hypoglycemia,drying and tingling lips
+osteoarthristis,joint pain
+osteoarthristis,neck pain
+osteoarthristis,knee pain
+osteoarthristis,hip joint pain
+osteoarthristis,swelling joints
+osteoarthristis,painful walking
+arthritis,muscle weakness
+arthritis,stiff neck
+arthritis,swelling joints
+arthritis,movement stiffness
+arthritis,painful walking
+vertigo paroymsal positional vertigo,vomiting
+vertigo paroymsal positional vertigo,headache
+vertigo paroymsal positional vertigo,nausea
+vertigo paroymsal positional vertigo,spinning movements
+vertigo paroymsal positional vertigo,loss of balance
+vertigo paroymsal positional vertigo,unsteadiness
+acne,skin rash
+acne,pus filled pimples
+acne,blackheads
+acne,scurring
+urinary tract infection,burning micturition
+urinary tract infection,bladder discomfort
+urinary tract infection,foul smell of urine
+urinary tract infection,continuous feel of urine
+psoriasis,skin rash
+psoriasis,joint pain
+psoriasis,skin peeling
+psoriasis,silver like dusting
+psoriasis,small dents in nails
+psoriasis,inflammatory nails
+impetigo,skin rash
+impetigo,high fever
+impetigo,blister
+impetigo,red sore around nose
+impetigo,yellow crust ooze

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="chat-container">
+  <h3>📘 Health FAQ</h3>
+  <p>Ask about a disease, or select one from the list.</p>
+
+  <form method="POST" style="margin-bottom: 1rem;">
+    <input type="text" name="question" placeholder="e.g. What is Malaria?" style="width:70%; padding:8px;">
+    <button type="submit">Search</button>
+  </form>
+
+  {% if answer %}
+    <div class="bot-msg">
+      <b>{{ answer[0] }}</b><br>
+      {{ answer[1] }}
+    </div>
+  {% endif %}
+
+  <h4>Browse Diseases</h4>
+  <ul>
+    {% for disease, desc in faq_dict.items() %}
+      <li><b>{{ disease.title() }}</b>: {{ desc[:120] }}... </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
