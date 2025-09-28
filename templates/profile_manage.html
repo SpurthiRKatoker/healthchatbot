@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  .edit-profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2f4f2f;
+  }
+
+  .edit-profile-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .edit-profile-form input,
+  .edit-profile-form select,
+  .edit-profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .edit-profile-form textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .form-buttons button,
+  .form-buttons a {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .btn-save {
+    background: #2f6d2f;
+    color: #fff;
+    border: none;
+  }
+
+  .btn-cancel {
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  .btn-save:hover {
+    background: #265a26;
+  }
+
+  .btn-cancel:hover {
+    background: #e0e0e0;
+  }
+</style>
+
+<div class="edit-profile-container">
+  <h2>{{ 'Edit Profile' if profile else 'Add Profile' }}</h2>
+
+  <form method="POST" class="edit-profile-form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" value="{{ profile.name if profile else '' }}" required>
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" value="{{ profile.age if profile and profile.age else '' }}">
+
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="">Select gender</option>
+      <option value="Male" {% if profile and profile.gender == 'Male' %}selected{% endif %}>Male</option>
+      <option value="Female" {% if profile and profile.gender == 'Female' %}selected{% endif %}>Female</option>
+      <option value="Other" {% if profile and profile.gender == 'Other' %}selected{% endif %}>Other</option>
+    </select>
+
+    <label for="conditions">Medical Conditions / History</label>
+    <textarea id="conditions" name="conditions">{{ profile.conditions if profile else '' }}</textarea>
+
+    <div class="form-buttons">
+      <button type="submit" class="btn-save">Save Changes</button>
+      <a href="{{ url_for('profiles') }}" class="btn-cancel">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

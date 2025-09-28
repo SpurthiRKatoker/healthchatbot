@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="landing">
+  <div class="icon">❤️</div>
+  <h1>Your AI Healthcare <span class="highlight">Assistant</span></h1>
+  <p>Get instant, intelligent healthcare guidance powered by AI. From symptom assessment to emergency detection, we’re here 24/7.</p>
+  <div class="buttons">
+    <a href="{{ url_for('signup') }}" class="btn primary">Get Started Free</a>
+    <a href="{{ url_for('login') }}" class="btn secondary">Sign In</a>
+  </div>
+</section>
+{% endblock %}

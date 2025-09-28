@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ title if title else "AI Healthcare Assistant" }}</title>
+
+  <!-- main style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% if extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename=extra_css) }}">
+  {% endif %}
+
+  <style>
+    .profile-switcher {
+      position: relative;
+      display: inline-block;
+    }
+    .switcher-btn {
+      background: none;
+      border: 1px solid #444;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .switcher-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 1000;
+    }
+    .switcher-menu .switcher-row {
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .switcher-menu .switcher-row a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #333;
+    }
+    .switcher-menu .switcher-row:hover {
+      background: #f5f5f5;
+    }
+    .profile-switcher.open .switcher-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a class="logo" href="{{ url_for('landing') }}">AI HealthCare</a>
+    </div>
+
+    <div class="nav-right">
+  {% if current_user.is_authenticated and current_user.is_active %}
+    {% set active_id = session.get('active_profile_id') %}
+    {% set active_name = None %}
+    {% for p in current_user.profiles %}
+      {% if p.id == active_id %}
+        {% set active_name = p.name %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="profile-switcher">
+      <button class="switcher-btn" onclick="toggleSwitcher(event)">
+        {{ active_name if active_name else 'Switch Profile' }}
+        <span class="caret">▾</span>
+      </button>
+      <div class="switcher-menu">
+        {% for p in current_user.profiles %}
+          <div class="switcher-row">
+            <a href="{{ url_for('set_active_profile', profile_id=p.id) }}">{{ p.name }}</a>
+            <a class="manage-link" href="{{ url_for('profile_manage', profile_id=p.id) }}">⚙</a>
+          </div>
+        {% endfor %}
+        <div class="switcher-row">
+          <a href="{{ url_for('add_profile') }}">+ Add Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+  {% else %}
+    <a href="{{ url_for('landing') }}">Home</a>
+    <a href="{{ url_for('login') }}">Sign In</a>
+    <a href="{{ url_for('signup') }}">Sign Up</a>
+  {% endif %}
+</div>
+
+  </nav>
+
+  <div class="flash-area">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  <main class="content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <script>
+    function toggleSwitcher(event) {
+      event.preventDefault();
+      const switcher = event.target.closest('.profile-switcher');
+      switcher.classList.toggle('open');
+    }
+
+    // close dropdown if clicked outside
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.profile-switcher').forEach(s => {
+        if (!s.contains(e.target)) s.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
